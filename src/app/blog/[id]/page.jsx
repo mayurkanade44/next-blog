@@ -1,11 +1,23 @@
 import Image from "next/image";
 
-const BlogPost = () => {
+async function getBlog(id) {
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) throw new Error("Server error");
+
+  return res.json();
+}
+
+const BlogPost = async ({ params }) => {
+  const data = await getBlog(params.id);
+
   return (
     <div>
       <div className="flex">
         <div className="flex-1 flex flex-col justify-between">
-          <h1 className="text-4xl">Test</h1>
+          <h1 className="text-4xl">{data.title}</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Exercitationem aperiam quae beatae voluptates a vel ex voluptatem

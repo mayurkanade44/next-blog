@@ -11,7 +11,7 @@ const Portfolio = () => {
           className="relative border-2 rounded-md bg-cover w-[300px] h-[400px] hover:text-green-500"
         >
           <Image src="/illustration.png" fill={true} alt="img" />
-          <span className="absolute right-5 bottom-5 text-3xl font-bold">
+          <span className="absolute right-5 bottom-5 text-3xl text-white font-bold">
             Illustrations
           </span>
         </Link>
@@ -20,17 +20,17 @@ const Portfolio = () => {
           className="relative border-2 bg-cover w-[300px] h-[400px] hover:text-green-500"
         >
           <Image src="/websites.jpg" fill={true} alt="img" />
-          <span className="absolute right-5 bottom-5 text-3xl font-bold ">
+          <span className="absolute right-5 bottom-5 text-3xl text-white font-bold ">
             Websites
           </span>
         </Link>
         <Link
-          href="/portfolio/application"
+          href="/portfolio/applications"
           className="relative border-2 bg-cover w-[300px] h-[400px] hover:text-green-500"
         >
           <Image src="/apps.jpg" fill={true} alt="img" />
-          <span className="absolute right-5 bottom-5 text-3xl font-bold">
-            Application
+          <span className="absolute right-5 bottom-5 text-3xl text-white font-bold">
+            Applications
           </span>
         </Link>
       </div>
