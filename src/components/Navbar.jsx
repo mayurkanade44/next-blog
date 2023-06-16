@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DarkMode from "./DarkMode";
 
 const links = [
   {
@@ -40,6 +41,7 @@ const Navbar = () => {
         Blog
       </Link>
       <div className="flex items-center gap-10">
+        <DarkMode />
         {links.map((link) => (
           <Link key={link.id} href={link.url} className="hover:text-green-500">
             {link.title}
