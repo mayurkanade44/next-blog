@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Kop Contact",
+  description: "Contact",
+};
+
 const Contact = () => {
   return (
     <div>

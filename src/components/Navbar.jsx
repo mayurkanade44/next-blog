@@ -1,5 +1,8 @@
+"use client"
+
 import Link from "next/link";
 import DarkMode from "./DarkMode";
+import { signOut } from "next-auth/react";
 
 const links = [
   {
@@ -47,7 +50,7 @@ const Navbar = () => {
             {link.title}
           </Link>
         ))}
-        <button className="p-1 bg-green-500 cursor-pointer rounded">
+        <button className="p-1 bg-green-500 cursor-pointer rounded" onClick={signOut}>
           Logout
         </button>
       </div>
